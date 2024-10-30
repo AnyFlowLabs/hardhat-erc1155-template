@@ -27,7 +27,7 @@ contract AnyFlowERC1155 is ERC1155, Ownable {
         uint256 id,
         uint256 value,
         bytes memory data
-    ) onlyOwner {
+    ) public onlyOwner {
         _mint(to, id, value, data);
     }
 
